@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Health Webinar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: flex-end; /* Aligning content to the right */
+        }
+        .webinar-container {
+            width: 100%; /* Keeping 2in gap from right */
+            height: 100%; /* Make sure the container takes full height */
+            background: url('your-image.jpg') no-repeat center center;
+            background-size: cover; /* Ensure the background covers the entire screen */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-align: right;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .webinar-topic {
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+            width: 100%;
+            text-align: right;
+        }
+        .webinar-speaker {
+            font-size: 18px;
+            color: white;
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: right;
+        }
+        .register-button {
+            background-color: #ff4081;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            text-align: right;
+            margin-top: 15px;
+        }
+        .register-button:hover {
+            background-color: #e91e63;
+        }
+        .register-form {
+            display: none; /* Initially hidden */
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            max-width: 400px;
+            width: 100%;
+            margin-top: 20px;
+            align-self: flex-end; 
+        }
+        .register-form label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        .register-form input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .show-form {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="webinar-container">
+        <div class="webinar-topic">Topic of Webinar</div>
+        <div class="webinar-speaker">by Arooshi Garg</div>
+        <button class="register-button" onclick="showForm()" style="align-self: flex-end; margin-top: 20px;">
+    Register Now
+</button>
+        
+        <form class="register-form" action="your-payment-link" method="post">
+          <h2 style="text-align: center; margin-bottom: 15px;">Registration Page</h2>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" required>
+            
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile" required>
+            
+            <label for="email">Email ID</label>
+            <input type="email" id="email" name="email" required>
+            
+            <button type="submit" class="register-button">Pay ₹99 & Register</button>
+        </form>
+    </div>
+
+    <script>
+        function showForm() {
+            document.querySelector('.register-form').classList.toggle('show-form');
+        }
+    </script>
+</body>
+</html>
